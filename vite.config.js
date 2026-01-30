@@ -15,4 +15,12 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        // This line makes the variables available globally
+        additionalData: `@use "@/assets/main.scss";`
+      },
+    },
+  },
 })
