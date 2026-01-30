@@ -2,7 +2,7 @@
 A simple and reusable nav bar element using:
 - Vue 3 Composition Api
 - Vue Router
-- SASS (for main and secondary color variables)
+- CSS Variables
 
 ## Features
 Here are some of the features

@@ -84,17 +84,17 @@ onUnmounted(() => {
   justify-content: space-between;
   padding: 1rem;
   align-items: center;
-  border-bottom: 1px solid main.$secondary-color;
+  border-bottom: 1px solid var(--secondary-color);
   height: 4rem;
   background-color: white;
 }
 nav a {
   display: block;
   padding: 1rem;
-  color: main.$primary-color;
+  color: var(--primary-color);
   text-decoration: none;
   font-weight: bold;
-  border-bottom: 1px solid main.$secondary-color;
+  border-bottom: 1px solid var(--secondary-color);
 }
 nav {
   position: fixed;
@@ -124,7 +124,7 @@ nav {
   display: block;
   width: 100%;
   height: 4px;
-  background-color: main.$primary-color;
+  background-color: var(--primary-color);
   border-radius: 4px;
   transition: all 0.3s ease-in-out; /* Smooth transition for all changes */
 }
@@ -170,7 +170,7 @@ nav {
         display: flex;
         align-items: center;
         height: 4rem;
-        border-bottom: 1px solid main.$secondary-color;
+        border-bottom: 1px solid var(--secondary-color);
         margin-bottom: 1rem;
     }
     nav a {
