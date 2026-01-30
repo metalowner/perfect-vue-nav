@@ -1,5 +1,5 @@
 <template>
-    <Transition name="slide-fade">
+<Transition name="slide-fade">
   <div v-if="visibleNavHeader" id="nav-container">
         <div id="nav-header">
             <span>LOGO</span>
@@ -17,7 +17,7 @@
     </Transition>
     <div id="nav-bar-spacing"></div>
   </div>
-  </Transition>
+</Transition>
 </template>
 
 <script lang="ts" setup>
@@ -29,6 +29,7 @@ const menuActive = ref(false)
 const isActiveMenu = ref('')
 const visibleNavHeader = ref(true)
 const skipAnimation = ref(false)
+const yScroll = ref(0)
 // toggle menu animation
 const toggleMenu = () => {
     if (menuActive.value === false) {
@@ -40,8 +41,6 @@ const toggleMenu = () => {
     }
     menuActive.value = !menuActive.value
 }
-
-const yScroll = ref(0);
 // hide and show menu depending on scroll direction
 const handleScroll = () => {
   // Add logic here based on yScroll.value
@@ -51,7 +50,7 @@ const handleScroll = () => {
     visibleNavHeader.value = false
   }
   yScroll.value = window.scrollY;
-};
+}
 // adjust layout according to screen width function
 const adjustLayout = () => {
     if (window.innerWidth > 768) {
@@ -66,11 +65,11 @@ const adjustLayout = () => {
 // set event listeners and launch layout adjustment functions
 onMounted(() => {
     adjustLayout()
-  window.addEventListener('scroll', handleScroll);
-  window.addEventListener('resize', adjustLayout);
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', adjustLayout);
 });
 onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll);
+    window.removeEventListener('scroll', handleScroll);
 });
 </script>
 
@@ -181,8 +180,8 @@ nav {
     }
     .slide-fade-enter-from,
     .slide-fade-leave-to {
-    transform: translateX(-20px);
-    opacity: 0;
+        transform: translateX(-20px);
+        opacity: 0;
     }
 }
 </style>
