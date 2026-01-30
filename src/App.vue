@@ -1,11 +1,35 @@
-<script setup></script>
+<script setup>
+import BaseNav from './components/BaseNav.vue';
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <header>
+    <BaseNav />
+  </header>
+  <main>
+    <RouterView />
+  </main>
+  <footer>
+
+  </footer>
 </template>
 
-<style scoped></style>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+  margin: 0;
+}
+main {
+  padding: 0 1rem;
+}
+p {
+    padding: 1rem;
+    margin: 1rem;
+    max-width: 20rem;
+}
+</style>
