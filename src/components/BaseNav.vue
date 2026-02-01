@@ -55,6 +55,7 @@ const handleScroll = () => {
 const adjustLayout = () => {
     if (window.innerWidth > 768) {
         menuActive.value = true
+        isActiveMenu.value = ''
     } else {
         skipAnimation.value = true
         menuActive.value = false
