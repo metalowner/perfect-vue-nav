@@ -55,10 +55,15 @@ const handleScroll = () => {
 const adjustLayout = () => {
     if (window.innerWidth > 768) {
         menuActive.value = true
-        isActiveMenu.value = ''
+        if (isActiveMenu.value == 'is-active') {
+          isActiveMenu.value = ''
+        }
     } else {
         skipAnimation.value = true
         menuActive.value = false
+        if (isActiveMenu.value == 'is-active') {
+          isActiveMenu.value = ''
+        }
         // Reset after transition finishes if necessary
         setTimeout(() => { skipAnimation.value = false; }, 0);
     }
